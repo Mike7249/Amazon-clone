@@ -44,7 +44,8 @@ function Payment() {
     event.preventDefault()
     setProcessing(true)
 
-    const payload = await stripe.confirmCardPayment(clientSecret, {
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
         },
@@ -96,7 +97,7 @@ function Payment() {
           <div className="payment__address">
             <p>{user?.email}</p>
             <p>123 React Lane</p>
-            <p>Los Angeles, CA</p>
+            <p>Bangalore,KA</p>
           </div>
         </div>
 
